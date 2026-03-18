@@ -35,6 +35,8 @@ CREATE TABLE DEPARTMENT (
     DNAME VARCHAR2(15) NOT NULL
 );
 ```
+![alt text](image.png)
+
 
 ### 2. Create EMPLOYEE Table
 ```sql
@@ -50,6 +52,7 @@ CREATE TABLE EMPLOYEE (
     FOREIGN KEY (DEPTNO) REFERENCES DEPARTMENT(DEPTNO)
 );
 ```
+![alt text](image-1.png)
 
 ### 3. Insert Values into DEPARTMENT
 ```sql
@@ -58,18 +61,21 @@ INSERT INTO DEPARTMENT VALUES (20, 'ACCOUNTING');
 INSERT INTO DEPARTMENT VALUES (30, 'SALES');
 INSERT INTO DEPARTMENT VALUES (40, 'OPERATIONS');
 ```
+![alt text](image-2.png)
 
 ### 4. Create EMPLOYEE_MASTER Table
 ```sql
 CREATE TABLE EMPLOYEE_MASTER AS
 SELECT * FROM EMPLOYEE;
 ```
+![alt text](image-3.png)
 
 ### 5. Delete Records
 ```sql
 DELETE FROM EMPLOYEE_MASTER
 WHERE DEPTNO = 10;
 ```
+![alt text](image-4.png)
 
 ### 6. Update Salary
 ```sql
@@ -77,17 +83,20 @@ UPDATE EMPLOYEE_MASTER
 SET SAL = SAL + (SAL * 0.10)
 WHERE DEPTNO = 20;
 ```
+![alt text](image-5.png)
 
 ### 7. Alter Table
 ```sql
 ALTER TABLE EMPLOYEE_MASTER
 MODIFY SAL NUMBER(10,2);
 ```
+![alt text](image-6.png)
 
 ### 8. Drop Table
 ```sql
 DROP TABLE EMPLOYEE_MASTER;
 ```
+![alt text](image-7.png)
 
 ---
 
